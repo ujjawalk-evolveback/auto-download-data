@@ -1,11 +1,10 @@
 from selenium import webdriver
 from my_cloud_imp import do_login
-import json
+from util import get_months_dict
 
 def main():
-    # Loading months.json file
-    with open('months.json') as f:
-        months_dict = json.load(f)
+    # Creating a months dictionary
+    months_dict = get_months_dict()
 
     # Looping over 3 properties from 1 to 3
     for p in range(1, 4):
